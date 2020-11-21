@@ -1,0 +1,33 @@
+.nome {
+  color: #006eed;
+}
+
+#lista {
+  padding-top: 80px;
+  padding-left: 5px;
+}
+
+#sobre {
+  padding-top: 50px;
+  text-align: center;
+}
+
+body {
+  color: #FFF;
+  background-color: rgb(17, 17, 17);
+  font-family: Roboto, Geneva, Tahoma, sans-serif;
+}
+
+#NomeTabela {
+  color:  rgb(158, 159, 255);
+  font-weight: bold;
+}
+
+#NomeProg {
+  color: lightgray;
+}
+
+#HeaderTable {
+  color: lightgray;
+  background-color: rgb(46, 32, 71)
+}

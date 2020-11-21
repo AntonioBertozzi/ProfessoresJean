@@ -1,0 +1,21 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.button {
+  color: #FFF;
+}
+
+#buttons1 :hover {
+  color: rgb(158, 159, 255);
+}
+
+#buttons2 :hover {
+  color: rgb(158, 159, 255);
+}
