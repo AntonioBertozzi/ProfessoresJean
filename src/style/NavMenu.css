@@ -8,14 +8,14 @@
   }
 }
 
-.button {
-  color: #FFF;
+#brandNome {
+  color: lightgray;
 }
 
-#buttons1 :hover {
-  color: rgb(158, 159, 255);
+.link {
+  color: #fff;
 }
 
-#buttons2 :hover {
+.link:hover {
   color: rgb(158, 159, 255);
 }

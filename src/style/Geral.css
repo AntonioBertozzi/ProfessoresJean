@@ -1,33 +1,45 @@
-.nome {
-  color: #006eed;
-}
-
-#lista {
-  padding-top: 80px;
-  padding-left: 5px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 #sobre {
-  padding-top: 50px;
   text-align: center;
 }
 
 body {
-  color: #FFF;
+  padding-top: 80px;
+  color: #fff;
   background-color: rgb(17, 17, 17);
-  font-family: Roboto, Geneva, Tahoma, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-#NomeTabela {
-  color:  rgb(158, 159, 255);
+#divBotao {
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+#tableNome {
+  color: rgb(158, 159, 255);
   font-weight: bold;
 }
 
-#NomeProg {
+#headerTable {
   color: lightgray;
+  background-color: rgb(46, 32, 71);
 }
 
-#HeaderTable {
-  color: lightgray;
-  background-color: rgb(46, 32, 71)
+#botao {
+  background-color: rgb(46, 32, 71);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 2px solid rgb(32, 22, 48);
+  border-radius: 20px;
+}
+
+#botao:hover {
+  background-color: rgb(66, 46, 102);
+}
+
+#postForm {
+  padding-left: 5px;
 }

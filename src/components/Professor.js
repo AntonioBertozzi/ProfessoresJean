@@ -1,64 +1,53 @@
-import React, { Component } from 'react';
-import requisicao from '../Api'
-import '../style/Geral.css'
-import { Table } from 'reactstrap';
+import React, { Component } from "react";
+import requisicao from "../Api";
+import "../style/Geral.css";
+import { Table, Button } from "reactstrap";
 
 export default class Professor extends Component {
-    state = {
-        dados: []
-    }
+  state = {
+    dados: [],
+  };
 
-    //chamado imediatamente após alguma atualização ocorrer
-    async componentDidMount() {
-        const retorno = await requisicao.get('professores');
-        this.setState({ dados: retorno.data });
-    }
+  async componentDidMount() {
+    const retorno = await requisicao.get("professores");
+    this.setState({ dados: retorno.data });
+  }
 
-    render() {
-        const { dados } = this.state;
-        return (
-            <div id="lista">
+  render() {
+    const { dados } = this.state;
+    return (
+      <div id="lista">
+        <div id="divBotao">
+          <Button id="botao" href="/cadastrar">
+            Cadastrar
+          </Button>
+        </div>
+        <Table dark striped hover responsive>
+          <thead id="headerTable">
+            <tr>
+              <th>Id</th>
+              <th>Nome</th>
+              <th>Nascimento</th>
+              <th>E-Mail</th>
+              <th>R.A</th>
+              <th>Senha</th>
+            </tr>
+          </thead>
 
-                <Table dark hover>
-                    <thead id= "HeaderTable">
-                        <th>Id</th>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Nascimento</th>
-                        <th>RA</th>
-                        <th>Senha</th>
-                    </thead>
-
-                {dados.map(usr => (
-
-                    <tbody>
-                        <tr>
-                            <th>{usr.Id}</th>
-                            <td id= "NomeTabela">{usr.Nome}</td>
-                            <td>{usr.Email}</td>
-                            <td>{usr.Nascimento}</td>
-                            <td>{usr.Ra}</td>
-                            <td>{usr.Senha}</td>
-                        </tr>
-                    </tbody>
-                    
-
-                    //<span id={usr.Id} key={usr.Id}>
-                    //    <div className="nome">Nome: {usr.Nome}</div>
-                    //    <div className="email">E-Mail: {usr.Email}</div>
-                    //    <div className="nascimento">Nascimento: {usr.Nascimento}</div>
-                    //    <div className="ra">R.A: {usr.Ra}</div>
-                    //    <div className="senha">Senha: {usr.Senha}</div>
-                    //    <hr></hr>
-                    //</span>
-                )
-                )}
-
-                </Table>
-
-            </div>
-            
-        );
-    }
-
+          {dados.map((usr) => (
+            <tbody key={usr.Id}>
+              <tr>
+                <th>{usr.Id}</th>
+                <td id="tableNome">{usr.Nome}</td>
+                <td>{usr.Nascimento}</td>
+                <td>{usr.Email}</td>
+                <td>{usr.Ra}</td>
+                <td>{usr.Senha}</td>
+              </tr>
+            </tbody>
+          ))}
+        </Table>
+      </div>
+    );
+  }
 }
